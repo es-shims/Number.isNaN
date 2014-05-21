@@ -15,10 +15,16 @@ Other polyfills for `Number.isNaN` are available:
 
 ## Installation
 
-In a browser:
+Via [bower](http://bower.io/):
+
+```bash
+bower install Number.isNaN
+```
+
+Then, in a browser:
 
 ```html
-<script src="isnan.js"></script>
+<script src="bower_components/Number.isNaN/isnan.js"></script>
 ```
 
 Via [npm](http://npmjs.org/):

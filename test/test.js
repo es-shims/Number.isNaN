@@ -1,7 +1,3 @@
-var expect = require('chai').expect;
-
-require('../');
-
 // Tests taken from the es6-shim test cases
 // Source: https://github.com/paulmillr/es6-shim/blob/master/test/number.js
 describe('Number', function() {

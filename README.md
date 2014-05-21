@@ -1,5 +1,11 @@
 # ES6 `Number.isNaN` polyfill
 
+[![Build status](https://travis-ci.org/leonderijke/Number.isNaN.svg?branch=master)](https://travis-ci.org/leonderijke/Number.isNaN)
+[![Dependency Status](https://david-dm.org/leonderijke/Number.isNaN.svg?theme=shields.io)](https://david-dm.org/leonderijke/Number.isNaN)
+[![devDependency Status](https://david-dm.org/leonderijke/Number.isNaN/dev-status.svg?theme=shields.io)](https://david-dm.org/leonderijke/Number.isNaN#info=devDependencies)
+[![browser support](https://ci.testling.com/leonderijke/Number.isNaN.png)
+](https://ci.testling.com/leonderijke/Number.isNaN)
+
 A polyfill for [the `Number.isNaN` method in ECMAScript 6](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isnan).
 
 Other polyfills for `Number.isNaN` are available:

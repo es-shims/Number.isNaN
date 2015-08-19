@@ -14,7 +14,7 @@ if (!Number.isNaN) {
 
 		// Source: http://wiki.ecmascript.org/doku.php?id=harmony:number.isnan
 		var isNaN = function(value) {
-			return typeof value === 'number' && globalisNaN(value);
+			return typeof value === 'number' && globalIsNaN(value);
 		};
 
 		if (defineProperty) {

@@ -1,57 +1,55 @@
-# ES6 `Number.isNaN` polyfill
+# number.isnan <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
-[![Build status](https://travis-ci.org/leonderijke/Number.isNaN.svg?branch=master)](https://travis-ci.org/leonderijke/Number.isNaN)
-[![Dependency Status](https://david-dm.org/leonderijke/Number.isNaN.svg?theme=shields.io)](https://david-dm.org/leonderijke/Number.isNaN)
-[![devDependency Status](https://david-dm.org/leonderijke/Number.isNaN/dev-status.svg?theme=shields.io)](https://david-dm.org/leonderijke/Number.isNaN#info=devDependencies)
-[![browser support](https://ci.testling.com/leonderijke/Number.isNaN.png)
-](https://ci.testling.com/leonderijke/Number.isNaN)
+[![github actions][actions-image]][actions-url]
+[![coverage][codecov-image]][codecov-url]
+[![dependency status][deps-svg]][deps-url]
+[![dev dependency status][dev-deps-svg]][dev-deps-url]
+[![License][license-image]][license-url]
+[![Downloads][downloads-image]][downloads-url]
 
-A polyfill for [the `Number.isNaN` method in ECMAScript 6](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isnan).
+[![npm badge][npm-badge-png]][package-url]
 
-Other polyfills for `Number.isNaN` are available:
+ES2015-compliant shim for Number.isNaN.
 
-* <https://github.com/ljharb/is-nan> by [Jordan Harband](https://twitter.com/ljharb)
-* <https://github.com/paulmillr/es6-shim/blob/0.10.1/es6-shim.js#L726-L733> by [Paul Miller](http://paulmillr.com/)
+This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the [spec](https://tc39.es/ecma262/#sec-number.isnan).
 
-## Installation
-
-Via [bower](http://bower.io/):
-
-```bash
-bower install Number.isNaN
-```
-
-Then, in a browser:
-
-```html
-<script src="bower_components/Number.isNaN/isnan.js"></script>
-```
-
-Via [npm](http://npmjs.org/):
-
-```bash
-npm install number.isnan
-```
-
-Then, in [Node.js](http://nodejs.org/):
+## Example
 
 ```js
-require('number.isnan');
+Number.isNaN = require('number.isnan');
+var assert = require('assert');
 
-// On Windows and on Mac systems with default settings, case doesn’t matter,
-// which allows you to do this instead:
-require('Number.isNaN');
+assert.notOk(Number.isNaN(undefined));
+assert.notOk(Number.isNaN(null));
+assert.notOk(Number.isNaN(false));
+assert.notOk(Number.isNaN(true));
+assert.notOk(Number.isNaN(0));
+assert.notOk(Number.isNaN(42));
+assert.notOk(Number.isNaN(Infinity));
+assert.notOk(Number.isNaN(-Infinity));
+assert.notOk(Number.isNaN('foo'));
+assert.notOk(Number.isNaN(function () {}));
+assert.notOk(Number.isNaN([]));
+assert.notOk(Number.isNaN({}));
+
+assert.ok(Number.isNaN(NaN));
 ```
 
-## Relevant links
+## Tests
+Simply clone the repo, `npm install`, and run `npm test`
 
-Find more information about `Number.isNaN` here:
-
-* https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isnan
-* http://wiki.ecmascript.org/doku.php?id=harmony:number.isnan
-* http://ariya.ofilabs.com/2014/05/the-curious-case-of-javascript-nan.html
-* http://www.2ality.com/2012/02/nan-infinity.html
-
-## License
-
-MIT License
+[package-url]: https://npmjs.org/package/number.isnan
+[npm-version-svg]: https://versionbadg.es/es-shims/number.isnan.svg
+[deps-svg]: https://david-dm.org/es-shims/Number.isNaN.svg
+[deps-url]: https://david-dm.org/es-shims/Number.isNaN
+[dev-deps-svg]: https://david-dm.org/es-shims/Number.isNaN/dev-status.svg
+[dev-deps-url]: https://david-dm.org/es-shims/Number.isNaN#info=devDependencies
+[npm-badge-png]: https://nodei.co/npm/number.isnan.png?downloads=true&stars=true
+[license-image]: https://img.shields.io/npm/l/number.isnan.svg
+[license-url]: LICENSE
+[downloads-image]: https://img.shields.io/npm/dm/number.isnan.svg
+[downloads-url]: https://npm-stat.com/charts.html?package=number.isnan
+[codecov-image]: https://codecov.io/gh/es-shims/Number.isNaN/branch/main/graphs/badge.svg
+[codecov-url]: https://app.codecov.io/gh/es-shims/Number.isNaN/
+[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/es-shims/Number.isNaN
+[actions-url]: https://github.com/es-shims/Number.isNaN/actions

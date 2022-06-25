@@ -1,2 +1,24 @@
-.DS_Store
-node_modules/
+# gitignore
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
+
+# Only apps should have lockfiles
+npm-shrinkwrap.json
+package-lock.json
+yarn.lock
+
+coverage/
+.nyc_output/

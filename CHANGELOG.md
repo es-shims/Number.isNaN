@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.0](https://github.com/es-shims/Number.isNaN/compare/v0.1.1...v1.0.0) - 2022-06-27
+
+### Commits
+
+- [Breaking] migrate package to match `is-nan` 1.x [`71f4c0c`](https://github.com/es-shims/Number.isNaN/commit/71f4c0cde63b633d41f9583908a8bb619b470583)
+- [meta] add `auto-changelog` [`60e73b8`](https://github.com/es-shims/Number.isNaN/commit/60e73b876d45beb1de7995d9d65cbde62e0ee54e)
+- [meta] use `npmignore` to autogenerate an npmignore file [`8a78b9a`](https://github.com/es-shims/Number.isNaN/commit/8a78b9a21064b48458d91b7df306d0630e1ff706)
+
 ## [v0.1.1](https://github.com/es-shims/Number.isNaN/compare/v0.1.0...v0.1.1) - 2015-08-19
 
 ### Fixed
